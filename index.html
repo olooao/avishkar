@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AVISHKAR | Premium Awards Level</title>
+  </head>
+  <body class="bg-[#FDFBF7] text-[#1A1814] antialiased selection:bg-[#C5A059] selection:text-white relative">
+    <!-- Ambient Glows -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+      <div class="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#E6C27A]/20 blur-[120px]"></div>
+      <div class="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-[#FFFFFF]/80 blur-[120px]"></div>
+      <div class="absolute top-[40%] left-[60%] w-[40vw] h-[40vw] rounded-full bg-[#D4AF37]/10 blur-[150px]"></div>
+    </div>
+
+    <div class="noise"></div>
+    <div class="cursor hidden md:block"></div>
+    
+    <!-- Floating Preview for List View -->
+    <div id="floating-preview" class="floating-preview hidden md:block">
+      <img src="" alt="Preview" class="w-full h-full object-cover" crossorigin="anonymous" />
+    </div>
+
+    <nav class="fixed top-0 left-0 w-full z-50 p-6 text-[#1A1814] flex justify-between items-center pointer-events-none">
+      <div class="font-display font-bold text-2xl tracking-tighter pointer-events-auto">AVISHKAR<span class="text-[#C5A059]">.</span></div>
+    </nav>
+
+    <header class="hero relative h-screen w-full overflow-hidden flex items-center justify-center z-10">
+      <div class="hero-bg absolute inset-0 z-0 scale-110">
+        <!-- Minimalist 3D Lightbulb -->
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2564&auto=format&fit=crop" alt="Innovation Lightbulb" class="w-full h-full object-cover opacity-60 mix-blend-darken" crossorigin="anonymous" />
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#FDFBF7]"></div>
+      </div>
+      
+      <div class="hero-title relative z-10 text-center flex flex-col items-center w-full px-4">
+        <p class="reveal font-mono text-sm md:text-base uppercase tracking-[0.5em] mb-6 text-[#C5A059] font-semibold">The Idea Incubator</p>
+        <div class="relative w-full flex justify-center items-center">
+          <h1 class="reveal font-display text-[15vw] font-black leading-[0.8] tracking-tighter uppercase text-[#1A1814]">
+            Avishkar
+          </h1>
+          <h1 class="reveal font-display text-[15vw] font-black leading-[0.8] tracking-tighter uppercase text-transparent text-stroke absolute top-0 left-0 w-full h-full flex items-center justify-center pointer-events-none">
+            Avishkar
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- Airbnb Style Sticky Navigation -->
+    <div id="category-nav" class="sticky top-0 z-40 w-full bg-[#FDFBF7]/90 backdrop-blur-md border-b border-[#1A1814]/10 pt-4 pb-0 px-6 md:px-12 overflow-x-auto hide-scrollbar transition-transform duration-300">
+      <div class="flex justify-start md:justify-center gap-8 md:gap-12 max-w-screen-2xl mx-auto min-w-max px-4">
+        
+        <a href="#about" class="nav-category group flex flex-col items-center gap-2 pb-3 relative hover-target cursor-none">
+          <svg class="w-6 h-6 text-[#1A1814]/40 group-hover:text-[#1A1814] transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <span class="text-xs font-medium text-[#1A1814]/50 group-hover:text-[#1A1814] transition-colors duration-300">Vision</span>
+          <div class="absolute bottom-0 left-0 w-full h-[2px] bg-[#1A1814] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
+        </a>
+
+        <a href="#stage" class="nav-category group flex flex-col items-center gap-2 pb-3 relative hover-target cursor-none">
+          <svg class="w-6 h-6 text-[#1A1814]/40 group-hover:text-[#1A1814] transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+          <span class="text-xs font-medium text-[#1A1814]/50 group-hover:text-[#1A1814] transition-colors duration-300">Stage</span>
+          <div class="absolute bottom-0 left-0 w-full h-[2px] bg-[#1A1814] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
+        </a>
+
+        <a href="#work" class="nav-category group flex flex-col items-center gap-2 pb-3 relative hover-target cursor-none">
+          <svg class="w-6 h-6 text-[#1A1814]/40 group-hover:text-[#1A1814] transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          <span class="text-xs font-medium text-[#1A1814]/50 group-hover:text-[#1A1814] transition-colors duration-300">Works</span>
+          <div class="absolute bottom-0 left-0 w-full h-[2px] bg-[#1A1814] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
+        </a>
+
+        <a href="#timeline" class="nav-category group flex flex-col items-center gap-2 pb-3 relative hover-target cursor-none">
+          <svg class="w-6 h-6 text-[#1A1814]/40 group-hover:text-[#1A1814] transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <span class="text-xs font-medium text-[#1A1814]/50 group-hover:text-[#1A1814] transition-colors duration-300">Journey</span>
+          <div class="absolute bottom-0 left-0 w-full h-[2px] bg-[#1A1814] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
+        </a>
+
+        <a href="#showcase" class="nav-category group flex flex-col items-center gap-2 pb-3 relative hover-target cursor-none">
+          <svg class="w-6 h-6 text-[#1A1814]/40 group-hover:text-[#1A1814] transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+          <span class="text-xs font-medium text-[#1A1814]/50 group-hover:text-[#1A1814] transition-colors duration-300">Gallery</span>
+          <div class="absolute bottom-0 left-0 w-full h-[2px] bg-[#1A1814] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
+        </a>
+
+        <a href="#contact" class="nav-category group flex flex-col items-center gap-2 pb-3 relative hover-target cursor-none">
+          <svg class="w-6 h-6 text-[#1A1814]/40 group-hover:text-[#1A1814] transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          <span class="text-xs font-medium text-[#1A1814]/50 group-hover:text-[#1A1814] transition-colors duration-300">Contact</span>
+          <div class="absolute bottom-0 left-0 w-full h-[2px] bg-[#1A1814] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
+        </a>
+
+      </div>
+    </div>
+
+    <section id="about" class="py-32 px-6 md:px-12 max-w-screen-2xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-5 reveal">
+          <h2 class="font-display text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-8 text-[#1A1814]">
+            Solve The <br/><span class="text-[#C5A059] italic font-serif lowercase tracking-normal pr-2">problem</span>
+          </h2>
+          <p class="text-lg md:text-xl text-[#1A1814]/70 font-light leading-relaxed mb-8">
+            We are a collective of relentless thinkers and builders. We don't just talk about innovation; we dissect complex challenges and engineer elegant, real-world solutions.
+          </p>
+          <button class="hover-target group relative px-8 py-4 overflow-hidden rounded-full border border-[#1A1814]/20 uppercase tracking-widest text-sm font-bold text-[#1A1814]">
+            <span class="relative z-10 transition-colors group-hover:text-white">Discover More</span>
+            <div class="absolute inset-0 bg-[#C5A059] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-out z-0"></div>
+          </button>
+        </div>
+        <div class="md:col-span-7 img-container h-[60vh] w-full overflow-hidden rounded-2xl reveal shadow-2xl shadow-[#C5A059]/10">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2000&auto=format&fit=crop" alt="Collaboration and Problem Solving" class="w-full h-[120%] object-cover -translate-y-[10%]" crossorigin="anonymous" />
+        </div>
+      </div>
+    </section>
+
+    <section id="stage" class="py-32 px-6 md:px-12 max-w-screen-2xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-7 img-container h-[60vh] w-full overflow-hidden rounded-2xl reveal shadow-2xl shadow-[#C5A059]/10 order-2 md:order-1">
+          <img src="https://images.unsplash.com/photo-1475721028070-2812c062f186?q=80&w=2000&auto=format&fit=crop" alt="Microphone on stage" class="w-full h-[120%] object-cover -translate-y-[10%]" crossorigin="anonymous" />
+        </div>
+        <div class="md:col-span-5 reveal order-1 md:order-2 md:pl-12">
+          <h2 class="font-display text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-8 text-[#1A1814]">
+            Kill Stage <br/><span class="text-[#C5A059] italic font-serif lowercase tracking-normal pr-2">fear</span>
+          </h2>
+          <p class="text-lg md:text-xl text-[#1A1814]/70 font-light leading-relaxed mb-8">
+            Public speaking is an art, not a fear. We provide a safe, encouraging platform to conquer stage fright, articulate your ideas, and command the room with absolute confidence.
+          </p>
+          <button class="hover-target group relative px-8 py-4 overflow-hidden rounded-full border border-[#1A1814]/20 uppercase tracking-widest text-sm font-bold text-[#1A1814]">
+            <span class="relative z-10 transition-colors group-hover:text-white">Take The Mic</span>
+            <div class="absolute inset-0 bg-[#C5A059] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-out z-0"></div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 overflow-hidden bg-[#1A1814] text-[#FDFBF7] relative z-10">
+      <div class="marquee-container flex whitespace-nowrap">
+        <div class="marquee-content flex items-center font-display text-7xl md:text-9xl font-black uppercase tracking-tighter">
+          <span class="mx-8">Problem Solving</span> <span class="text-[#C5A059] mx-8 font-serif italic font-light">✦</span>
+          <span class="mx-8">Public Speaking</span> <span class="text-[#C5A059] mx-8 font-serif italic font-light">✦</span>
+          <span class="mx-8">Innovation</span> <span class="text-[#C5A059] mx-8 font-serif italic font-light">✦</span>
+          <span class="mx-8">Leadership</span> <span class="text-[#C5A059] mx-8 font-serif italic font-light">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="py-32 px-6 md:px-12 max-w-screen-2xl mx-auto relative z-10">
+      <div class="mb-20 reveal">
+        <h2 class="font-display text-5xl md:text-7xl font-black uppercase tracking-tighter">Selected <span class="text-transparent text-stroke">Works</span></h2>
+      </div>
+      
+      <div class="flex flex-col gap-32">
+        <!-- Project 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-8 img-container h-[70vh] w-full overflow-hidden rounded-2xl reveal order-2 md:order-1 shadow-2xl shadow-[#C5A059]/10">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000&auto=format&fit=crop" alt="Hackathon" class="w-full h-[120%] object-cover -translate-y-[10%]" crossorigin="anonymous" />
+          </div>
+          <div class="md:col-span-4 reveal order-1 md:order-2 md:pl-12">
+            <div class="font-mono text-[#C5A059] mb-4 font-semibold">01 // Engineering</div>
+            <h3 class="font-display text-4xl font-bold uppercase mb-4">Hackathon Winners</h3>
+            <p class="text-[#1A1814]/70 mb-8">Solving real-world problems through intense 24-hour coding sprints and collaborative engineering.</p>
+            <a href="#" class="hover-target inline-flex items-center gap-2 border-b border-[#1A1814]/30 pb-1 hover:border-[#C5A059] hover:text-[#C5A059] transition-colors uppercase tracking-widest text-sm font-semibold">View Case <span class="text-[#C5A059]">↗</span></a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-4 reveal md:pr-12 text-left md:text-right">
+            <div class="font-mono text-[#C5A059] mb-4 font-semibold">02 // Strategy</div>
+            <h3 class="font-display text-4xl font-bold uppercase mb-4">Ideation Workshops</h3>
+            <p class="text-[#1A1814]/70 mb-8">Brainstorming sessions that turn abstract thoughts into actionable, innovative prototypes.</p>
+            <a href="#" class="hover-target inline-flex items-center gap-2 border-b border-[#1A1814]/30 pb-1 hover:border-[#C5A059] hover:text-[#C5A059] transition-colors uppercase tracking-widest text-sm font-semibold">View Case <span class="text-[#C5A059]">↗</span></a>
+          </div>
+          <div class="md:col-span-8 img-container h-[70vh] w-full overflow-hidden rounded-2xl reveal shadow-2xl shadow-[#C5A059]/10">
+            <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=2000&auto=format&fit=crop" alt="Workshop" class="w-full h-[120%] object-cover -translate-y-[10%]" crossorigin="anonymous" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="relative min-h-screen py-32 px-6 md:px-12 max-w-screen-2xl mx-auto z-10 overflow-hidden">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 reveal gap-6">
+        <h2 class="font-display text-5xl md:text-7xl font-black uppercase tracking-tighter">Our <span class="text-transparent text-stroke">Journey</span></h2>
+        <button id="view-toggle" class="hover-target px-6 py-3 rounded-full border border-[#C5A059] text-[#C5A059] text-sm font-bold uppercase tracking-widest transition-all hover:bg-[#C5A059] hover:text-white shadow-lg shadow-[#C5A059]/10">
+          List View
+        </button>
+      </div>
+
+      <div class="relative w-full h-[60vh] md:h-[70vh]">
+        <!-- Stack View -->
+        <div id="stack-view" class="absolute inset-0 w-full h-full perspective-container flex justify-center items-center">
+          <div id="timeline-nav" class="absolute left-0 top-1/2 -translate-y-1/2 flex-col gap-6 z-20 hidden md:flex">
+            <!-- Nav populated by JS -->
+          </div>
+          <div id="cards-container" class="relative w-full h-full transform-style-3d">
+            <!-- Cards populated by JS -->
+          </div>
+        </div>
+
+        <!-- List View -->
+        <div id="list-view" class="absolute inset-0 w-full h-full hidden flex-col justify-center gap-2 z-10">
+          <div id="list-container" class="flex flex-col w-full max-w-4xl mx-auto">
+            <!-- List items populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="showcase" class="py-32 px-6 md:px-12 max-w-screen-2xl mx-auto relative z-10">
+      <div class="mb-20 reveal">
+        <h2 class="font-display text-5xl md:text-7xl font-black uppercase tracking-tighter">Motion <span class="text-transparent text-stroke">Gallery</span></h2>
+      </div>
+      
+      <div class="flex flex-col md:flex-row h-[80vh] gap-4 w-full">
+        <!-- Card 1 -->
+        <div class="gallery-card relative rounded-2xl overflow-hidden cursor-none group">
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-sky-in-a-sunset-26070-large.mp4" muted loop playsinline class="absolute inset-0 w-full h-full object-cover"></video>
+          <div class="absolute inset-0 bg-[#1A1814]/20 group-hover:bg-transparent transition-colors duration-700"></div>
+          <div class="absolute bottom-8 left-8 right-8 p-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100">
+            <div class="font-mono text-[#C5A059] mb-2 font-semibold text-sm">01 // Aerial</div>
+            <h3 class="font-display text-2xl md:text-3xl font-bold text-white uppercase mb-2">Sunset Plateaus</h3>
+            <p class="text-white/80 font-light text-sm hidden md:block">Cinematic drone footage capturing the golden hour over rugged terrain.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="gallery-card relative rounded-2xl overflow-hidden cursor-none group">
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-tree-branches-in-the-breeze-1188-large.mp4" muted loop playsinline class="absolute inset-0 w-full h-full object-cover"></video>
+          <div class="absolute inset-0 bg-[#1A1814]/20 group-hover:bg-transparent transition-colors duration-700"></div>
+          <div class="absolute bottom-8 left-8 right-8 p-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100">
+            <div class="font-mono text-[#C5A059] mb-2 font-semibold text-sm">02 // Nature</div>
+            <h3 class="font-display text-2xl md:text-3xl font-bold text-white uppercase mb-2">Whispering Woods</h3>
+            <p class="text-white/80 font-light text-sm hidden md:block">Organic movements and natural light filtering through the canopy.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="gallery-card relative rounded-2xl overflow-hidden cursor-none group">
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-stars-in-space-1610-large.mp4" muted loop playsinline class="absolute inset-0 w-full h-full object-cover"></video>
+          <div class="absolute inset-0 bg-[#1A1814]/20 group-hover:bg-transparent transition-colors duration-700"></div>
+          <div class="absolute bottom-8 left-8 right-8 p-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100">
+            <div class="font-mono text-[#C5A059] mb-2 font-semibold text-sm">03 // Cosmos</div>
+            <h3 class="font-display text-2xl md:text-3xl font-bold text-white uppercase mb-2">Deep Space</h3>
+            <p class="text-white/80 font-light text-sm hidden md:block">A journey through the stars, exploring the vastness of the universe.</p>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="gallery-card relative rounded-2xl overflow-hidden cursor-none group">
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-network-connection-background-13648-large.mp4" muted loop playsinline class="absolute inset-0 w-full h-full object-cover"></video>
+          <div class="absolute inset-0 bg-[#1A1814]/20 group-hover:bg-transparent transition-colors duration-700"></div>
+          <div class="absolute bottom-8 left-8 right-8 p-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100">
+            <div class="font-mono text-[#C5A059] mb-2 font-semibold text-sm">04 // Tech</div>
+            <h3 class="font-display text-2xl md:text-3xl font-bold text-white uppercase mb-2">Neural Nets</h3>
+            <p class="text-white/80 font-light text-sm hidden md:block">Visualizing data flow and artificial intelligence processing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="py-20 px-6 md:px-12 border-t border-[#1A1814]/10 text-center md:text-left relative z-10 bg-[#FDFBF7]">
+      <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <h2 class="font-display text-[8vw] md:text-[5vw] font-black uppercase tracking-tighter leading-none">
+          Let's <span class="text-[#C5A059]">Talk</span>
+        </h2>
+        <div class="flex flex-col items-center md:items-end gap-4">
+          <a href="mailto:hello@avishkar.com" class="hover-target text-2xl md:text-4xl font-light hover:text-[#C5A059] transition-colors">hello@avishkar.com</a>
+          <div class="flex gap-6 font-mono text-sm uppercase text-[#1A1814]/50 mt-4 font-semibold">
+            <a href="#" class="hover-target hover:text-[#C5A059] transition-colors">Twitter</a>
+            <a href="#" class="hover-target hover:text-[#C5A059] transition-colors">Instagram</a>
+            <a href="#" class="hover-target hover:text-[#C5A059] transition-colors">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
