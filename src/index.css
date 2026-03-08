@@ -137,6 +137,20 @@ body {
   }
 }
 
+/* 3D Carousel Styles */
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(197, 160, 89, 0.2);
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0,0,0,0.2));
+  backface-visibility: hidden;
+}
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }

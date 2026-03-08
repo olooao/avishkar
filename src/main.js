@@ -289,4 +289,60 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // 3D Carousel Logic
+  const carouselSpinner = document.getElementById('carousel-spinner');
+  const carouselPrev = document.getElementById('carousel-prev');
+  const carouselNext = document.getElementById('carousel-next');
+
+  if (carouselSpinner) {
+    const carouselData = [
+      { img: 'https://images.unsplash.com/photo-1516280440503-66f804040071?q=80&w=800&auto=format&fit=crop', title: 'The Pitch' },
+      { img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop', title: 'Brainstorm' },
+      { img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop', title: 'Strategy' },
+      { img: 'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=800&auto=format&fit=crop', title: 'Workshop' },
+      { img: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=800&auto=format&fit=crop', title: 'Teamwork' },
+      { img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop', title: 'Hackathon' }
+    ];
+
+    const numItems = carouselData.length;
+    const angle = 360 / numItems;
+    // Calculate radius based on width of item (approx 300px)
+    const radius = Math.round((300 / 2) / Math.tan(Math.PI / numItems)) + 50; 
+
+    carouselData.forEach((item, i) => {
+      const el = document.createElement('div');
+      el.className = 'carousel-item group cursor-none';
+      el.style.transform = `rotateY(${i * angle}deg) translateZ(${radius}px)`;
+      el.innerHTML = `
+        <img src="${item.img}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" crossorigin="anonymous" />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1A1814]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 left-0 w-full p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+          <h3 class="font-display text-2xl font-bold text-[#FDFBF7] uppercase">${item.title}</h3>
+        </div>
+      `;
+      
+      // Add cursor hover effect
+      el.addEventListener('mouseenter', () => { if (cursor) cursor.classList.add('hover'); });
+      el.addEventListener('mouseleave', () => { if (cursor) cursor.classList.remove('hover'); });
+      
+      carouselSpinner.appendChild(el);
+    });
+
+    let currentAngle = 0;
+
+    const rotateCarousel = () => {
+      carouselSpinner.style.transform = `rotateY(${currentAngle}deg)`;
+    };
+
+    carouselPrev.addEventListener('click', () => {
+      currentAngle += angle;
+      rotateCarousel();
+    });
+
+    carouselNext.addEventListener('click', () => {
+      currentAngle -= angle;
+      rotateCarousel();
+    });
+  }
 });
